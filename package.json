@@ -1,0 +1,41 @@
+{
+  "name": "part3-fullstack-",
+  "version": "1.0.0",
+  "description": "phonebook backend and more",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build:ui": "rm -rf build && cd ../Fullstack/part2/phonebook && npm run build && cp -r build ../../../Fullstack-part3",
+    "deploy": "git push heroku main",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
+    "logs:prod": "heroku logs --tail",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JimNulambeh/Part3-Fullstack-.git"
+  },
+  "keywords": [
+    "phone"
+  ],
+  "author": "jim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JimNulambeh/Part3-Fullstack-/issues"
+  },
+  "homepage": "https://github.com/JimNulambeh/Part3-Fullstack-#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.6.0",
+    "express": "^4.18.1",
+    "mongoose": "^5.13.14",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "nodemon": "^2.0.15"
+  }
+}
